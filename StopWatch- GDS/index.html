@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cronómetro Timer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="slide active" id="slide-1">
+            <h1>CountDown Watch ⏱️</h1>
+            <div class="input-container">
+                <input type="number" id="hours" placeholder="HH" min="0">
+                <input type="number" id="minutes" placeholder="MM" min="0" max="59">
+                <input type="number" id="seconds" placeholder="SS" min="0" max="59">
+                <input type="number" id="tenths" placeholder="T" min="0" max="9">
+            </div>
+            <div class="buttons">
+                <button id="accept">Aceptar</button>
+            </div>
+            <div class="navigation-buttons">
+                <button class="arrow" id="next-slide">&rarr;</button>
+            </div>
+        </div>
+        <div class="slide" id="slide-2">
+            <h1>CountDown Watch ⏱️</h1>
+            <div id="timer-display">00:00:00.0</div>
+            <div class="buttons">
+                <button id="start">Start</button>
+                <button id="stop">Stop</button>
+            </div>
+            <div class="navigation-buttons">
+                <button class="arrow" id="prev-slide">&larr;</button>
+            </div>
+        </div>
+    </div>
+    <div id="fireworks-container"></div>
+    <audio id="beep-sound" src="beep.mp3" preload="auto"></audio>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stopwatch and Countdown</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f8f9fa;
+        }
+        .panel {
+            width: 600px;
+            min-height: 400px;
+            background-color: silver;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            padding: 20px;
+        }
+        .header, .footer {
+            background-color: blue;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            font-size: 1.5em;
+            margin-bottom: 20px;
+        }
+        .button-row {
+            display: flex;
+            justify-content: space-around;
+        }
+        .button {
+            flex: 1;
+            margin: 0 5px;
+            padding: 20px;
+            text-align: center;
+            font-size: 1.5em;
+            color: white;
+            cursor: pointer;
+        }
+        .display {
+            background-color: black;
+            color: yellow;
+            text-align: center;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 2em;
+            margin-bottom: 20px;
+            padding: 10px 0;
+        }
+        .btn-custom {
+            width: 48%;
+            margin: 1%;
+        }
+        .btn-back {
+            width: 100%;
+            margin-top: 20px;
+        }
+        .number-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+        .number-button {
+            width: 18%;
+            margin: 1%;
+            padding: 20px;
+            text-align: center;
+            font-size: 1.5em;
+            color: white;
+            background-color: blue;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div id="selectFunction" class="panel">
+        <div class="header">Select Function</div>
+        <div class="button-row">
+            <div id="btnStopwatch" class="button" style="background-color: green;">Stopwatch</div>
+            <div id="btnCountdown" class="button" style="background-color: red;">Countdown</div>
+        </div>
+    </div>
+
+    <div id="stopwatch" class="panel" style="display: none;">
+        <div class="header">Stopwatch</div>
+        <div id="stopwatchDisplay" class="display">00:00:00.000</div>
+        <div class="button-row">
+            <button id="startStopwatch" class="btn btn-success btn-custom">Start</button>
+            <button id="resetStopwatch" class="btn btn-danger btn-custom">Reset</button>
+        </div>
+        <button id="backStopwatch" class="btn btn-light btn-back">Back</button>
+    </div>
+
+    <div id="countdown" class="panel" style="display: none;">
+        <div class="header">Countdown</div>
+        <div id="countdownDisplay" class="display">00:00:00</div>
+        <div class="number-buttons">
+            <div class="number-button">0</div>
+            <div class="number-button">1</div>
+            <div class="number-button">2</div>
+            <div class="number-button">3</div>
+            <div class="number-button">4</div>
+            <div class="number-button">5</div>
+            <div class="number-button">6</div>
+            <div class="number-button">7</div>
+            <div class="number-button">8</div>
+            <div class="number-button">9</div>
+        </div>
+        <div class="button-row">
+            <button id="startCountdown" class="btn btn-success btn-custom">Start</button>
+            <button id="resetCountdown" class="btn btn-danger btn-custom">Reset</button>
+        </div>
+        <button id="backCountdown" class="btn btn-light btn-back">Back</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

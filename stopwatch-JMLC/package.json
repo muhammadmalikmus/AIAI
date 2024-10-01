@@ -1,0 +1,13 @@
+{
+  "type": "module",
+  "devDependencies": {
+    "chai": "^5.1.1",
+    "jsdom": "^24.1.0",
+    "mocha": "^10.4.0",
+    "selenium-webdriver": "^4.21.0"
+  },
+  "scripts": {
+    "test:acceptance": "mocha tests/acceptance.test.js",
+    "test:unit": "mocha tests/unit.test.js"
+  }
+}

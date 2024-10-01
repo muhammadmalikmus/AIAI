@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cronómetro y Cuenta Atrás</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="selector">
+        <button id="select-stopwatch">Cronómetro</button>
+        <button id="select-countdown">Cuenta Atrás</button>
+    </div>
+
+    <div id="stopwatch-view" class="hidden">
+        <h1>Cronómetro</h1>
+        <div id="stopwatch-display">00:00:00.000</div>
+        <button id="start-stopwatch">Start</button>
+        <button id="clear-stopwatch">Clear</button>
+    </div>
+
+    <div id="countdown-view" class="hidden">
+        <h1>Cuenta Atrás</h1>
+        <div id="countdown-display">00:00:00.000</div>
+        <div id="countdown-inputs">
+            <button class="countdown-digit" data-digit="0">0</button>
+            <button class="countdown-digit" data-digit="1">1</button>
+            <button class="countdown-digit" data-digit="2">2</button>
+            <button class="countdown-digit" data-digit="3">3</button>
+            <button class="countdown-digit" data-digit="4">4</button>
+            <button class="countdown-digit" data-digit="5">5</button>
+            <button class="countdown-digit" data-digit="6">6</button>
+            <button class="countdown-digit" data-digit="7">7</button>
+            <button class="countdown-digit" data-digit="8">8</button>
+            <button class="countdown-digit" data-digit="9">9</button>
+            <button id="clear-countdown">Clear</button>
+            <button id="set-countdown">Set</button>
+        </div>
+        <div id="countdown-controls" class="hidden">
+            <button id="start-countdown">Start</button>
+            <button id="clear-countdown-start">Clear</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+

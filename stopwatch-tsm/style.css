@@ -1,0 +1,40 @@
+body {
+  font-family: "Arial", sans-serif;
+}
+
+.hidden {
+  display: none;
+}
+
+#main-screen div {
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+#main-screen div:hover {
+  transform: scale(1.1);
+}
+
+.hover-green:hover {
+  color: green;
+}
+
+.hover-red:hover {
+  color: red;
+}
+
+.flex {
+  display: flex;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.space-x-20 > * + * {
+  margin-left: 5rem; /* Espaciado entre los iconos */
+}

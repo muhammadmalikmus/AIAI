@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Stopwatch & Countdown Timer</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="bg-gray-100 flex items-center justify-center min-h-screen">
+    <div id="main-screen" class="text-center">
+      <h1 class="text-3xl font-bold mb-8">Choose a Timer</h1>
+      <div class="flex justify-center space-x-20">
+        <div>
+          <span
+            class="material-icons text-9xl cursor-pointer hover-green"
+            id="stopwatch-icon"
+            style="font-size: 10rem"
+            >timer</span
+          >
+          <p class="text-xl mt-2">Cronómetro</p>
+        </div>
+        <div>
+          <span
+            class="material-icons text-9xl cursor-pointer hover-red"
+            id="countdown-icon"
+            style="font-size: 10rem"
+            >hourglass_bottom</span
+          >
+          <p class="text-xl mt-2">Temporizador</p>
+        </div>
+      </div>
+    </div>
+
+    <div id="stopwatch-screen" class="hidden text-center">
+      <span
+        class="material-icons text-3xl cursor-pointer mt-4 mb-4 hover:text-blue-500"
+        id="back-stopwatch"
+        >arrow_back</span
+      >
+      <h1 class="text-3xl font-bold mb-4">Cronómetro</h1>
+      <div
+        id="stopwatch-display"
+        class="text-6xl flex justify-center items-center"
+      >
+        <span id="stopwatch-time" class="text-6xl">00:00:00</span
+        ><span id="stopwatch-ms" class="text-3xl">.000</span>
+      </div>
+      <div class="flex justify-center mt-4 space-x-4">
+        <button
+          id="start-stopwatch"
+          class="bg-gray-500 text-white py-2 px-4 rounded hover:bg-gray-600"
+        >
+          Start
+        </button>
+        <button
+          id="reset-stopwatch"
+          class="bg-yellow-500 text-white py-2 px-4 rounded hover:bg-yellow-600"
+        >
+          Reset
+        </button>
+      </div>
+    </div>
+
+    <div id="countdown-screen" class="hidden text-center">
+      <span
+        class="material-icons text-3xl cursor-pointer mt-4 mb-4 hover:text-blue-500"
+        id="back-countdown"
+        >arrow_back</span
+      >
+      <h1 class="text-3xl font-bold mb-4">Temporizador</h1>
+      <div
+        id="countdown-display"
+        class="text-6xl flex justify-center items-center"
+      >
+        <span id="countdown-time" class="text-6xl">00:00:00</span
+        ><span id="countdown-ms" class="text-3xl">.000</span>
+      </div>
+      <div class="flex justify-center mt-4 space-x-4">
+        <input
+          type="number"
+          id="hours"
+          class="border rounded py-1 px-2"
+          placeholder="HH"
+          min="0"
+        />
+        <input
+          type="number"
+          id="minutes"
+          class="border rounded py-1 px-2"
+          placeholder="MM"
+          min="0"
+        />
+        <input
+          type="number"
+          id="seconds"
+          class="border rounded py-1 px-2"
+          placeholder="SS"
+          min="0"
+        />
+      </div>
+      <div class="flex justify-center mt-4 space-x-4">
+        <button
+          id="start-countdown"
+          class="bg-gray-500 text-white py-2 px-4 rounded hover:bg-gray-600"
+        >
+          Start
+        </button>
+        <button
+          id="reset-countdown"
+          class="bg-yellow-500 text-white py-2 px-4 rounded hover:bg-yellow-600"
+        >
+          Reset
+        </button>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

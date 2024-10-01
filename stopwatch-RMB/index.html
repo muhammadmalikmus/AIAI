@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cronómetro y Cuenta Atrás</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <section class="section">
+        <div class="container">
+            <div class="level">
+                <div class="level-left">
+                    <button id="lang-es" class="button is-small">ES</button>
+                    <button id="lang-en" class="button is-small">EN</button>
+                    <button id="lang-pt" class="button is-small">PT</button>
+                </div>
+            </div>
+            <div id="home" class="content has-text-centered">
+                <h1 id="home-title">Elige una opción</h1>
+                <div class="buttons">
+                    <button id="stopwatch-btn" class="button is-primary is-large">
+                        <span id="stopwatch-text">Cronómetro</span>
+                        <span class="icon">
+                            <i class="fas fa-stopwatch"></i>
+                        </span>
+                    </button>
+                    <button id="countdown-btn" class="button is-danger is-large">
+                        <span id="countdown-text">Cuenta Atrás</span>
+                        <span class="icon">
+                            <i class="fas fa-hourglass-half"></i>
+                        </span>
+                    </button>
+                </div>
+            </div>
+
+            <div id="stopwatch" class="content has-text-centered is-hidden">
+                <h1 id="stopwatch-title">Cronómetro</h1>
+                <div id="stopwatch-display" class="display">00:00:00.000</div>
+                <div class="buttons">
+                    <button id="stopwatch-start-pause" class="button is-primary">Iniciar</button>
+                    <button id="stopwatch-reset" class="button is-warning">Resetear</button>
+                    <button id="stopwatch-back" class="button is-danger">Volver</button>
+                </div>
+            </div>
+
+            <div id="countdown" class="content has-text-centered is-hidden">
+                <h1 id="countdown-title">Cuenta Atrás</h1>
+                <div id="countdown-config" class="config">
+                    <label id="hours-label" for="hours">Horas:</label>
+                    <input id="hours" type="number" min="0" class="input">
+                    <label id="minutes-label" for="minutes">Minutos:</label>
+                    <input id="minutes" type="number" min="0" class="input">
+                    <label id="seconds-label" for="seconds">Segundos:</label>
+                    <input id="seconds" type="number" min="0" class="input">
+                    <button id="countdown-set" class="button is-primary">Confirmar</button>
+                </div>
+                <div id="countdown-display" class="display is-hidden">00:00:00</div>
+                <div class="buttons is-hidden" id="countdown-controls">
+                    <button id="countdown-start-pause" class="button is-primary">Iniciar</button>
+                    <button id="countdown-reset" class="button is-warning">Reconfigurar</button>
+                    <button id="countdown-back" class="button is-danger">Volver</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script defer src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</body>
+</html>

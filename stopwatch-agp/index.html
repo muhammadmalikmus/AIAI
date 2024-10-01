@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timer and Countdown</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        .stopwatch-display {
+            background-color: #e0e7ff; /* Light blue background */
+            border-radius: 0.5rem;
+            border: 0.2rem solid #4b5563; /* Dark gray border */
+            font-size: 9rem; /* 3x size */
+            padding: 3rem; /* 3x size */
+            width: 48rem; /* Fixed width */
+            text-align: center;
+            position: relative;
+        }
+        .milliseconds-display {
+            font-size: 3rem; /* Smaller size for milliseconds */
+            position: absolute;
+            bottom: 1rem;
+            right: 1rem;
+        }
+        .button-green {
+            background-color: #34d399; /* Green */
+            color: white;
+            font-size: 3rem; /* 3x size */
+            padding: 1.5rem 3rem; /* 3x size */
+        }
+        .button-red {
+            background-color: #f87171; /* Red */
+            color: white;
+            font-size: 3rem; /* 3x size */
+            padding: 1.5rem 3rem; /* 3x size */
+        }
+        .button-blue {
+            background-color: #60a5fa; /* Blue */
+            color: white;
+            font-size: 3rem; /* 3x size */
+            padding: 1.5rem 3rem; /* 3x size */
+        }
+    </style>
+</head>
+<body class="flex flex-col items-center justify-center min-h-screen bg-gray-100">
+    <h1>Timer and Countdown</h1>
+    <div class="stopwatch-display flex items-center justify-center mb-8">
+        <span id="time">00:00:00</span> 
+        <span id="milliseconds" class="milliseconds-display">000</span>
+    </div>
+    <div class="flex space-x-4">
+        <button id="startPauseButton" class="button-green px-6 py-2 rounded">Start</button>
+        <button id="resetButton" class="button-red px-6 py-2 rounded">Clear</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

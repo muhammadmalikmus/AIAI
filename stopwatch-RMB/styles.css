@@ -1,0 +1,13 @@
+.display {
+    font-size: 3rem;
+    margin: 20px 0;
+}
+
+.config input {
+    max-width: 70px;
+    margin: 5px;
+}
+
+.is-hidden {
+    display: none;
+}

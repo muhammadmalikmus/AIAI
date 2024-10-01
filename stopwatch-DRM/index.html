@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timer and Countdown</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="container">
+    <h1 class="text-center my-4">Timer and Countdown</h1>
+    <div id="initial-screen" class="text-center">
+        <button id="stopwatch-button" class="btn btn-primary mx-2">Stopwatch</button>
+        <button id="countdown-button" class="btn btn-primary mx-2">Countdown</button>
+    </div>
+    <div id="stopwatch" class="d-none">
+        <!-- Stopwatch Functionality -->
+        <button id="back-button-stopwatch" class="btn btn-secondary">Back</button>
+        <div id="stopwatch-display" class="display-4 text-center my-4">00:00:00.000</div>
+        <div class="text-center">
+            <button id="start-stopwatch" class="btn btn-success">Start</button>
+            <button id="stop-stopwatch" class="btn btn-danger">Stop</button>
+            <button id="reset-stopwatch" class="btn btn-warning">Reset</button>
+        </div>
+    </div>
+    <div id="countdown" class="d-none">
+        <!-- Countdown Functionality -->
+        <button id="back-button-countdown" class="btn btn-secondary">Back</button>
+        <div id="countdown-display" class="display-4 text-center my-4">00:00.000</div>
+        <div class="text-center">
+            <div id="countdown-buttons" class="mb-3">
+                <!-- Number buttons will be appended here -->
+            </div>
+            <button id="start-countdown" class="btn btn-success">Start</button>
+            <button id="stop-countdown" class="btn btn-danger">Stop</button>
+            <button id="reset-countdown" class="btn btn-warning">Reset</button>
+        </div>
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
